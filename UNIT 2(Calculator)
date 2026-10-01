@@ -1,0 +1,69 @@
+#include &lt;stdio.h&gt;
+int main()
+{
+int choice;
+float a, b;
+printf(&quot;1. Addition\n&quot;);
+printf(&quot;2. Subtraction\n&quot;);
+printf(&quot;3. Multiplication\n&quot;);
+printf(&quot;4. Division\n&quot;);
+printf(&quot;Enter your choice: &quot;);
+scanf(&quot;%d&quot;, &amp;choice);
+
+printf(&quot;Enter two numbers: &quot;);
+scanf(&quot;%f %f&quot;, &amp;a, &amp;b);
+switch(choice)
+{
+case 1:
+printf(&quot;Result = %.2f&quot;, a + b);
+break;
+case 2:
+printf(&quot;Result = %.2f&quot;, a - b);
+break;
+case 3:
+printf(&quot;Result = %.2f&quot;, a * b);
+break;
+case 4:
+printf(&quot;Result = %.2f&quot;, a / b);
+break;
+default:
+printf(&quot;Invalid choice&quot;);
+}
+return 0;
+}
+
+5. Multiplication Table Using While, Do-While, and For Loops
+Problem Statement
+Write a C program to generate the multiplication table of any number using while loop, do-while loop,
+and for loop.
+Program
+#include &lt;stdio.h&gt;
+int main()
+{
+int num;
+int i;
+printf(&quot;Enter a number: &quot;);
+scanf(&quot;%d&quot;, &amp;num);
+
+printf(&quot;\nMultiplication Table Using While Loop:\n&quot;);
+i = 1;
+while (i &lt;= 10)
+{
+printf(&quot;%d x %d = %d\n&quot;, num, i, num * i);
+i++;
+}
+printf(&quot;\nMultiplication Table Using Do-While Loop:\n&quot;);
+i = 1;
+do
+{
+printf(&quot;%d x %d = %d\n&quot;, num, i, num * i);
+i++;
+} while (i &lt;= 10);
+printf(&quot;\nMultiplication Table Using For Loop:\n&quot;);
+for (i = 1; i &lt;= 10; i++)
+{
+printf(&quot;%d x %d = %d\n&quot;, num, i, num * i);
+}
+return 0;
+}
+}
